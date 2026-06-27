@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vishv Book Publication</title>
+<!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1806172970793773');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1806172970793773&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#08263a;
+    color:#fff;
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:430px;
+    margin:auto;
+    padding:20px 15px;
+    text-align:center;
+}
+
+.logo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #000;
+    background:#fff;
+    margin-top:10px;
+}
+
+.title{
+    color:#78E56D;
+    font-size:clamp(30px,6vw,48px);
+    font-weight:700;
+    margin:20px 0;
+}
+
+.telegram-btn{
+    display:block;
+    width:100%;
+    max-width:320px;
+    margin:25px auto;
+    padding:18px;
+    text-decoration:none;
+    color:white;
+    font-size:22px;
+    font-weight:700;
+    border-radius:20px;
+    border:3px solid white;
+    background:#67c4d2;
+    box-shadow:
+    0 0 15px #67c4d2,
+    0 0 35px #67c4d2,
+    0 0 55px #67c4d2;
+}
+
+.telegram-btn:hover{
+    transform:scale(1.03);
+}
+
+.redirect{
+    margin-top:25px;
+}
+
+.redirect-text{
+    font-size:24px;
+}
+
+#countdown{
+    font-size:90px;
+    font-weight:bold;
+    line-height:1;
+    margin-top:10px;
+}
+
+.seconds{
+    font-size:28px;
+}
+
+.value-box{
+    color:#FFD700;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.features{
+    margin-top:25px;
+}
+
+.box{
+    width:100%;
+    background:#fff;
+    color:#000;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:15px;
+    font-size:22px;
+    font-weight:600;
+}
+
+.ads{
+    color:#cfcfcf;
+    margin-top:20px;
+    font-size:15px;
+}
+
+@media(max-width:480px){
+
+    .logo{
+        width:150px;
+        height:150px;
+    }
+
+    .telegram-btn{
+        font-size:18px;
+        padding:16px;
+    }
+
+    #countdown{
+        font-size:70px;
+    }
+
+    .box{
+        font-size:18px;
+        padding:18px 12px;
+    }
+
+    .title{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Logo -->
+    <img src="Screenshot_2026-05-09-23-29-01-95_965bbf4d18d205f782c6b8409c5773a4.jpg" alt="Logo" class="logo">
+
+    <!-- Title -->
+    <h1 class="title">Vishv Book Publication</h1>
+
+    <!-- Random Value -->
+    <div class="value-box">
+        Registration ID: <span id="randomValue"></span>
+    </div>
+
+    <!-- Telegram Button -->
+<a href="https://t.me/+tm9BtcG4rmQzNzY1"
+id="subscribeBtn"
+class="telegram-btn"
+target="_blank"
+rel="noopener"
+onclick="fbq('track','Subscribe',{value:999,currency:'INR'});">
+JOIN TELEGRAM
+</a>
+
+    <!-- Countdown -->
+    <div class="redirect">
+        <div class="redirect-text">Redirect in..</div>
+
+        <div id="countdown">23</div>
+
+        <div class="seconds">Seconds</div>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+
+        <div class="box">
+            📚 Online Writing Platform
+        </div>
+
+        <div class="box">
+            🏠 Work From Home 100% Trusted
+        </div>
+
+        <div class="box">
+            🎓 For Students & Housewives
+        </div>
+
+        <div class="box">
+            💰 Advance Salary After Registration
+        </div>
+
+        <div class="box">
+            ⏱️ 24/7 Platform Available
+        </div>
+
+    </div>
+
+    <a href="https://t.me/+vCa9jzOKnsc5OTY1"
+   target="_blank"
+   rel="noopener"
+   style="text-decoration:none;">
+    <div class="ads">
+        Ads Managed by Satyam Ads Agency
+    </div>
+</a>
+
+</div>
+
+<script>
+
+// 3 Digit Random Value
+const randomValue = Math.floor(Math.random() * 900) + 100;
+document.getElementById("randomValue").innerText = randomValue;
+
+// Countdown
+let timeLeft = 23;
+
+const timer = document.getElementById("countdown");
+
+const countdown = setInterval(() => {
+
+    timeLeft--;
+
+    timer.innerText = timeLeft;
+
+    if(timeLeft <= 0){
+
+        clearInterval(countdown);
+
+        window.location.href =
+        "https://t.me/+1FfkfcBYmQg0ZjY1";
+
+    }
+
+},1000);
+
+// Subscribe Event
+document.getElementById("subscribeBtn")
+.addEventListener("click", function(){
+
+    const value =
+    Math.floor(Math.random() * 900) + 100;
+
+    // Facebook Pixel
+    if(typeof fbq !== "undefined"){
+
+        fbq('track','Subscribe',{
+            value:value,
+            currency:'INR'
+        });
+
+    }
+
+    console.log(
+      "Subscribe Event Fired. Value:",
+      value
+    );
+
+});
+
+</script>
+
+</body>
+</html>
